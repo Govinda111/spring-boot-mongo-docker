@@ -12,9 +12,7 @@ services:
       - 8080:8080
     working_dir: /opt/app
     depends_on:
-      - mongo
-    networks:
-    - springappnetwork  
+      - mongo  
     deploy:  # This will be considered only in docker swarm.
       replicas: 2
       update_config:
